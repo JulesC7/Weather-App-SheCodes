@@ -1,0 +1,117 @@
+body {
+  background: linear-gradient(
+    90deg,
+    #ffa500 25%,
+    #f14444 45%,
+    #d53567 55%,
+    #9a109a 94%
+  );
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(45deg, #9a109a, #d53567, #f14444, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+h4 {
+  font-size: 80px;
+  font-weight: 300;
+  display: inline;
+}
+h5 {
+  font-size: 20px;
+}
+.content {
+  margin: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.search-bar {
+  margin: 20px auto;
+  width: 50%;
+  background: rgba(179, 178, 178, 0.05);
+  box-shadow: 0 8px 9px 0 rgba(31, 38, 135, 0.17);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(44, 42, 42, 0.18);
+}
+
+.temperature-in-the-city {
+  width: 33.333%;
+}
+.search-label {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+}
+.another-forecast {
+  vertical-align: middle;
+}
+.another-forecast {
+  padding: 20px 15px;
+}
+.actual-city {
+  padding: 20px 15px;
+}
+.card-body {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.week-weather {
+  margin: 20px 10px;
+  padding: 0px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 9px 0 rgba(31, 38, 135, 0.17);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(44, 42, 42, 0.18);
+}
+.week-forecast {
+  margin: 50px auto;
+}
+
+.searching-city {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.weather-description {
+  text-transform: capitalize;
+}
+
+.actual-temp {
+  font-size: 80px;
+  font-weight: 300;
+  padding: 0 0 0 20px;
+  display: inline;
+  text-align: justify;
+}
+.celsius-fahrenheit {
+  font-size: 40px;
+  font-weight: 500;
+  padding: 10px;
+}
+.input-group-text-svg {
+  display: flex;
+  justify-content: center;
+}
+.current-city {
+  background-color: #ffa500;
+}
+a {
+  text-decoration: none;
+  color: #212529;
+}
