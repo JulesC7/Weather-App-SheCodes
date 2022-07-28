@@ -111,7 +111,16 @@ h5 {
 .current-city {
   background-color: #ffa500;
 }
+.link {
+  text-decoration: none;
+  color: #212529;
+  font-weight: 800;
+  padding: 0 0 40px 40px;
+}
 a {
   text-decoration: none;
   color: #212529;
+}
+.open-source {
+  text-align: center;
 }
