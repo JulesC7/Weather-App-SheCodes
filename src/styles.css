@@ -6,6 +6,7 @@ body {
     #d53567 55%,
     #9a109a 94%
   );
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
   text-align: center;
@@ -25,13 +26,14 @@ h5 {
   font-size: 20px;
 }
 .content {
-  margin: 30px;
+  margin: 30px auto 20px auto;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 1000px;
 }
 
 .search-bar {
@@ -113,9 +115,9 @@ h5 {
 }
 .link {
   text-decoration: none;
-  color: #212529;
-  font-weight: 800;
-  padding: 0 0 40px 40px;
+  color: white;
+  font-weight: 600;
+  padding: 0 0 0 40px;
 }
 a {
   text-decoration: none;
@@ -123,4 +125,5 @@ a {
 }
 .open-source {
   text-align: center;
+  color: white;
 }
