@@ -46,6 +46,15 @@ function weatherOfTypingCity(response) {
   document.getElementById("feels-like").innerHTML = `Feels like ${Math.round(
     response.data.main.feels_like
   )}°C`;
+  document
+    .getElementById("icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .getElementById("icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 function cityWeather(city) {
@@ -84,6 +93,15 @@ function weatherCurrentPosition(response) {
   document.getElementById("feels-like").innerHTML = `Feels like ${Math.round(
     response.data.main.feels_like
   )}°C`;
+  document
+    .getElementById("icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .getElementById("icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 function getCurrentPosition(event) {
   event.preventDefault();

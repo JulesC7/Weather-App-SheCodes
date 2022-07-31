@@ -97,18 +97,17 @@ h5 {
 .actual-temp {
   font-size: 80px;
   font-weight: 300;
-  padding: 0 0 0 20px;
   display: inline;
   text-align: justify;
 }
 .celsius-fahrenheit {
-  font-size: 40px;
+  padding: 20px 0 0 0;
+  font-size: 25px;
   font-weight: 500;
-  padding: 10px;
 }
 .input-group-text-svg {
-  display: flex;
   justify-content: center;
+  padding: 10px 0 0 0;
 }
 .current-city {
   background-color: #ffa500;
