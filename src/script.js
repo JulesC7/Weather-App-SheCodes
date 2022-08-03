@@ -55,6 +55,8 @@ function weatherOfTypingCity(response) {
   document
     .getElementById("icon")
     .setAttribute("alt", response.data.weather[0].description);
+  tempCel.classList.add("active");
+  tempFah.classList.remove("active");
 }
 
 function cityWeather(city) {
@@ -101,6 +103,8 @@ function weatherCurrentPosition(response) {
   document
     .getElementById("icon")
     .setAttribute("alt", response.data.weather[0].description);
+  tempCel.classList.add("active");
+  tempFah.classList.remove("active");
 }
 function getCurrentPosition(event) {
   event.preventDefault();
