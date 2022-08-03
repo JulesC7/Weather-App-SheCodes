@@ -34,9 +34,9 @@ function weatherOfTypingCity(response) {
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.getElementById("weather-description").innerHTML =
     response.data.weather[0].description;
-  document.getElementById("actual-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.getElementById("actual-temp").innerHTML =
+    Math.round(celsiusTemperature);
   document.getElementById("wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
@@ -81,9 +81,8 @@ function weatherCurrentPosition(response) {
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.getElementById("weather-description").innerHTML =
     response.data.weather[0].description;
-  document.getElementById("actual-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.getElementById("actual-temp").innerHTML =
+    Math.round(celsiusTemperature);
   document.getElementById("wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
@@ -123,18 +122,25 @@ currentCity.addEventListener("click", getCurrentPosition);
 
 //choosing between Celsius and Fahrenheit
 function tempCelsius() {
-  document.getElementById("actual-temp").innerHTML = 17;
-  document.getElementById("celsius-link").style = "color:#931199";
-  document.getElementById("fahrenheit-link").style = "color: #212529";
+  document.getElementById("actual-temp").innerHTML =
+    Math.round(celsiusTemperature);
+  tempCel.classList.add("active");
+  tempFah.classList.remove("active");
 }
+
+function tempFahrenheit() {
+  document.getElementById("actual-temp").innerHTML = Math.round(
+    (celsiusTemperature * 9) / 5 + 32
+  );
+  tempCel.classList.remove("active");
+  tempFah.classList.add("active");
+}
+
+let celsiusTemperature = null;
+
 let tempCel = document.querySelector("#celsius-link");
 tempCel.addEventListener("click", tempCelsius);
 
-function tempFahrenheit() {
-  document.getElementById("actual-temp").innerHTML = 63;
-  document.getElementById("fahrenheit-link").style = "color: #931199";
-  document.getElementById("celsius-link").style = "color:#212529";
-}
 let tempFah = document.querySelector("#fahrenheit-link");
 tempFah.addEventListener("click", tempFahrenheit);
 //end choosing between Celsius and Fahrenheit

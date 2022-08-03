@@ -120,8 +120,12 @@ h5 {
 }
 a {
   text-decoration: none;
+}
+.temperature-in-the-city .active {
+  cursor: default;
   color: #212529;
 }
+
 .open-source {
   text-align: center;
   color: white;
