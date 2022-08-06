@@ -78,6 +78,8 @@ search.addEventListener("submit", searchForm);
 //looking for current location
 function weatherCurrentPosition(response) {
   console.log(response);
+  document.querySelector("#search-engine").value = "";
+  //document.getElementById("#search-engine").value = "";
   document.getElementById(
     "searching-city"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
