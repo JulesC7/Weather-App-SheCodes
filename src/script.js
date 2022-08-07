@@ -26,6 +26,34 @@ if (minute < 10) {
 let day = `${days[now.getDay()]} ${hours}:${minutes}`;
 document.getElementById("day").innerHTML = day;
 
+function weatherForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let forecastHTML = "";
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="card week-weather" style="width: 10%">
+        <div class="card-body">
+          <h5 class="card-title">${day}</h5>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            fill="currentColor"
+            class="bi bi-cloud-drizzle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973zM8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 2z"
+            />
+          </svg>
+          <h6 class="week-weather-temperature">19°C</h6>
+        </div>
+      </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //searching weather for typing city
 function weatherOfTypingCity(response) {
   console.log(response.data);
@@ -78,8 +106,8 @@ search.addEventListener("submit", searchForm);
 //looking for current location
 function weatherCurrentPosition(response) {
   console.log(response);
-  document.querySelector("#search-engine").value = "";
-  //document.getElementById("#search-engine").value = "";
+  //document.querySelector("#search-engine").value = ""; (it works too)
+  document.getElementById("search-engine").value = "";
   document.getElementById(
     "searching-city"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
@@ -152,3 +180,4 @@ tempFah.addEventListener("click", tempFahrenheit);
 //end choosing between Celsius and Fahrenheit
 
 cityWeather("Kyiv");
+weatherForecast();

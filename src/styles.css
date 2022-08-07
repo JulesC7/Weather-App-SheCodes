@@ -24,8 +24,9 @@ h4 {
 h5 {
   font-size: 20px;
 }
+
 .content {
-  margin: 30px auto 20px auto;
+  margin: 30px auto;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(9px);
@@ -58,9 +59,11 @@ h5 {
 }
 .another-forecast {
   vertical-align: middle;
-}
-.another-forecast {
   padding: 20px 15px;
+}
+.week-weather-temperature {
+  padding: 15px 0 0 0;
+  margin: 0 auto;
 }
 .actual-city {
   padding: 20px 15px;
