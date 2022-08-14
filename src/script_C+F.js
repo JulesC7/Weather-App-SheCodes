@@ -98,6 +98,8 @@ function weatherOfTypingCity(response) {
   document
     .getElementById("icon")
     .setAttribute("alt", response.data.weather[0].description);
+  tempCel.classList.add("active");
+  tempFah.classList.remove("active");
   document.getElementById(
     "temp-max"
   ).innerHTML = `Max temperature: ${Math.round(response.data.main.temp_max)}°C`;
@@ -151,6 +153,8 @@ function weatherCurrentPosition(response) {
   document
     .getElementById("icon")
     .setAttribute("alt", response.data.weather[0].description);
+  tempCel.classList.add("active");
+  tempFah.classList.remove("active");
   document.getElementById(
     "temp-max"
   ).innerHTML = `Max temperature: ${Math.round(response.data.main.temp_max)}°C`;
@@ -174,5 +178,30 @@ function currentPosition(position) {
 let currentCity = document.querySelector("#current-city");
 currentCity.addEventListener("click", getCurrentPosition);
 //end looking for current location
+
+//choosing between Celsius and Fahrenheit
+function tempCelsius() {
+  document.getElementById("actual-temp").innerHTML =
+    Math.round(celsiusTemperature);
+  tempCel.classList.add("active");
+  tempFah.classList.remove("active");
+}
+
+function tempFahrenheit() {
+  document.getElementById("actual-temp").innerHTML = Math.round(
+    (celsiusTemperature * 9) / 5 + 32
+  );
+  tempCel.classList.remove("active");
+  tempFah.classList.add("active");
+}
+
+let celsiusTemperature = null;
+
+let tempCel = document.querySelector("#celsius-link");
+tempCel.addEventListener("click", tempCelsius);
+
+let tempFah = document.querySelector("#fahrenheit-link");
+tempFah.addEventListener("click", tempFahrenheit);
+//end choosing between Celsius and Fahrenheit
 
 cityWeather("Kyiv");

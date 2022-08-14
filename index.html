@@ -18,6 +18,8 @@
     <div class="wrapper">
       <div class="content">
         <h1>Weather forecast</h1>
+        <div class="searching-city" id="searching-city">Kyiv, Ukraine</div>
+
         <div class="card-border">
           <div class="search-bar" id="search-bar">
             <form class="input-group">
@@ -56,26 +58,18 @@
             <div class="container">
               <div class="row d-flex justify-content-center">
                 <div class="actual-city col-md-3">
-                  <div class="searching-city" id="searching-city">
-                    Kyiv, Ukraine
-                  </div>
                   <div id="day"></div>
                   <div class="weather-description" id="weather-description">
                     Cloud and sun
                   </div>
+                  <div class="temp-max" id="temp-max">Max:</div>
                 </div>
                 <div class="input-group temperature-in-the-city col-md-3">
                   <span class="input-group-text-svg">
                     <img src="" alt="" id="icon" class="float-left" />
                   </span>
                   <span class="actual-temp" id="actual-temp"> </span>
-                  <span class="celsius-fahrenheit" id="celsius-fahrenheit">
-                    <a href="#" class="active" id="celsius-link">°C</a>|<a
-                      href="#"
-                      id="fahrenheit-link"
-                      >°F</a
-                    >
-                  </span>
+                  <span class="celsius-fahrenheit" id="celsius-link">°C</span>
                 </div>
                 <div class="another-forecast col-md-3">
                   <div class="wind" id="wind">Wind: 3 km/h</div>
