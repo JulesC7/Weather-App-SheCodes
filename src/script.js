@@ -48,7 +48,7 @@ function weatherForecast(response) {
           <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
           <img src = http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
-          }@2x.png alt="" width = "64"/>
+          }@2x.png alt="" width = 85% />
           <h6 class="week-weather-temperature">${Math.round(
             forecastDay.temp.day
           )}°C</h6>
