@@ -43,7 +43,7 @@ function weatherForecast(response) {
     if (index > 0) {
       forecastHTML =
         forecastHTML +
-        `<div class="card week-weather" style="width: 10%">
+        `<div class="card week-weather col-sm-1">
         <div class="card-body">
           <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
           <img src = http://openweathermap.org/img/wn/${

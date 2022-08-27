@@ -1,20 +1,19 @@
+:root {
+  --primary-color: #212529;
+  --secondary-color: white;
+  --accent-color: #0d6efd;
+}
+
 body {
-  background: linear-gradient(
-    90deg,
-    #ffa500 25%,
-    #f14444 45%,
-    #d53567 55%,
-    #9a109a 94%
-  );
   background-image: url("../img/sunset-with-clouds-1.jpg");
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
   text-align: center;
   padding: 20px;
-  color: white;
+  color: var(--secondary-color);
 }
 h4 {
   font-size: 80px;
@@ -52,26 +51,26 @@ h5 {
 }
 
 .temperature-in-the-city {
-  width: 33.333%;
-  padding-left: 30px;
+  /*width: 33.333%;*/
+  padding: 0 0 0 20px;
 }
 .search-label {
   display: flex;
   justify-content: center;
   padding: 12px;
-  background: white;
+  background: var(--secondary-color);
   border-radius: 10px;
 }
 .another-forecast {
   vertical-align: middle;
-  padding: 20px 0 20px 60px;
+  padding: 20px 0 20px 20px;
 }
 .week-weather-temperature {
   padding: 15px 0 0 0;
   margin: 0 auto;
 }
 .actual-city {
-  padding: 20px 0 20px 35px;
+  padding: 20px 0 20px 20px;
 }
 .card-body {
   text-align: center;
@@ -84,7 +83,7 @@ h5 {
   justify-content: center;
   margin: 20px 10px;
   padding: 0px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--secondary-color);
   box-shadow: 0 8px 9px 0 rgba(31, 38, 135, 0.17);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
@@ -99,7 +98,7 @@ h5 {
   text-transform: capitalize;
   font-weight: 700;
   text-align: center;
-  color: white;
+  color: var(--secondary-color);
   font-size: 32px;
 }
 
@@ -112,9 +111,10 @@ h5 {
   font-weight: 300;
   display: inline;
   text-align: justify;
+  padding: 0;
 }
 .celsius-fahrenheit {
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
   font-size: 25px;
   font-weight: 500;
 }
@@ -124,7 +124,7 @@ h5 {
 }
 .link {
   text-decoration: none;
-  color: #212529;
+  color: var(--primary-color);
   font-weight: 600;
   padding: 0 0 0 40px;
 }
@@ -133,10 +133,13 @@ a {
 }
 .temperature-in-the-city .active {
   cursor: default;
-  color: #212529;
+  color: var(--primary-color);
 }
 
 .open-source {
   text-align: center;
-  color: #212529;
+  color: var(--primary-color);
+}
+#super {
+  vertical-align: super;
 }

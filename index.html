@@ -57,21 +57,25 @@
           <div class="container week-forecast">
             <div class="container">
               <div class="row d-flex justify-content-center">
-                <div class="actual-city col-md-3">
+                <div class="actual-city col-sm-3 text-center">
                   <div id="day"></div>
                   <div class="weather-description" id="weather-description">
                     Cloud and sun
                   </div>
                   <div class="temp-max" id="temp-max">Max:</div>
                 </div>
-                <div class="input-group temperature-in-the-city col-md-3">
-                  <span class="input-group-text-svg">
-                    <img src="" alt="" id="icon" class="float-left" />
-                  </span>
-                  <span class="actual-temp" id="actual-temp"> </span>
-                  <span class="celsius-fahrenheit" id="celsius-link">°C</span>
+                <div class="temperature-in-the-city col-sm-3 text-center">
+                  <div class="row text-center">
+                    <span class="input-group-text-svg col-4">
+                      <img src="" alt="" id="icon" class="float-left" />
+                    </span>
+                    <span class="actual-temp col-4" id="actual-temp"></span>
+                    <span class="celsius-fahrenheit col-1" id="celsius-link">
+                      °C
+                    </span>
+                  </div>
                 </div>
-                <div class="another-forecast col-md-3">
+                <div class="another-forecast col-sm-3 text-center">
                   <div class="wind" id="wind">Wind: 3 km/h</div>
                   <div class="humidity" id="humidity">Humidity: 27%</div>
                   <div class="feels-like" id="feels-like">Feels like 19°C</div>
