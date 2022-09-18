@@ -9,11 +9,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 h1 {
   text-align: center;
   padding: 20px;
   color: var(--secondary-color);
+  font-size: 48px;
 }
 h4 {
   font-size: 80px;
@@ -118,7 +120,7 @@ a {
   font-weight: 700;
   text-align: center;
   color: var(--secondary-color);
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .weather-description {
@@ -157,8 +159,46 @@ a {
 }
 
 @media (max-width: 900px) {
+  body {
+    font-size: 16px;
+  }
   .wrapper {
     display: block;
     margin: 0 15px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .searching-city {
+    font-size: 24px;
+  }
+  input#search-engine.form-control {
+    font-size: 14px;
+  }
+  input.input-group-text {
+    font-size: 14px;
+  }
+  button#current-city.current-city.input-group-text.btn.btn-primary {
+    font-size: 14px;
+  }
+  .actual-temp {
+    font-size: 48px;
+    padding: 40px 0;
+  }
+  div.temperature-in-the-city.col-sm-3 {
+    line-height: 25px;
+  }
+  span.input-group-text-svg.col-6.d-flex.justify-content-end img {
+    max-width: 50%;
+    height: auto;
+  }
+  div.card.week-weather.col-sm-1 {
+    margin: 20px 30px;
+  }
+  div.container.short-week-forecast {
+    padding: 0 30px;
+  }
+  .input-group-text-svg {
+    padding: 0;
   }
 }
