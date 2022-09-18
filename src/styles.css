@@ -23,11 +23,32 @@ h4 {
 h5 {
   font-size: 20px;
 }
-
-.wrapper {
-  display: block;
-  margin: 0 auto;
+a {
+  text-decoration: none;
 }
+
+.container .main {
+  display: grid;
+  place-items: center;
+}
+/*.wrapper {
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -ms-transform: translateY(-50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
 .content {
   margin: 30px auto;
   background: rgba(255, 255, 255, 0.5);
@@ -38,10 +59,12 @@ h5 {
   border: 1px solid rgba(255, 255, 255, 0.18);
   max-width: 1000px;
 }
-
+.search-container {
+  margin: 0 10px;
+}
 .search-bar {
   margin: 20px auto;
-  width: 50%;
+  max-width: 650px;
   background: rgba(179, 178, 178, 0.05);
   box-shadow: 0 8px 9px 0 rgba(31, 38, 135, 0.17);
   backdrop-filter: blur(9px);
@@ -50,10 +73,6 @@ h5 {
   border: 1px solid rgba(44, 42, 42, 0.18);
 }
 
-.temperature-in-the-city {
-  /*width: 33.333%;*/
-  padding: 0 0 0 20px;
-}
 .search-label {
   display: flex;
   justify-content: center;
@@ -127,9 +146,6 @@ h5 {
   font-weight: 600;
   padding: 0 0 0 40px;
 }
-a {
-  text-decoration: none;
-}
 .temperature-in-the-city .active {
   cursor: default;
   color: var(--primary-color);
@@ -138,4 +154,11 @@ a {
 .open-source {
   text-align: center;
   color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    display: block;
+    margin: 0 15px;
+  }
 }
