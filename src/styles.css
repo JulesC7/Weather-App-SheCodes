@@ -33,6 +33,12 @@ a {
   display: grid;
   place-items: center;
 }
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*.wrapper {
   display: block;
   justify-content: center;
